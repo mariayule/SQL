@@ -1,0 +1,27 @@
+--Create a book store database
+
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, title TEXT, author TEXT, price INTEGER, release_year INTEGER);
+
+INSERT INTO bookstore VALUES (1, "The Last Time I Lied", "Riley Sager", 14.5, 2018);
+INSERT INTO bookstore VALUES (2, "One of Us is Lying", "Karen McManus", 13.97, 2017);
+INSERT INTO bookstore VALUES (3, "The Haunting of Sunshine Girl", "Paige McKenzie", 13.89, 2016);
+INSERT INTO bookstore VALUES (4, "The 5th Wave", "Rick Yancey", 14.02, 2015);
+INSERT INTO bookstore VALUES (5, "The Hate U Give", "Angie Thomas", 14.49, 2017);
+INSERT INTO bookstore VALUES (6, "The Darkest Minds", "Alexandra Bracken", 14.16, 2018);
+INSERT INTO bookstore VALUES (7, "You", "Caroline Kepnes", 13.95, 2014);
+INSERT INTO bookstore VALUES (8, "Misery", "stephen King", 14.21, 1988);
+INSERT INTO bookstore VALUES (9, 'The green Mile', 'Stephen King', 14.47, 1996);
+INSERT INTO bookstore VALUES (10, 'Doctor Sleep','Stephen King', 14.12, 2013);
+INSERT INTO bookstore VALUES (11, 'The Outsiders', 'Stephen kings', 14, 2018);
+INSERT INTO bookstore VALUES (12, 'Pretty Girls', 'Karin Slaughter', 4.04, 2015);
+INSERT INTO bookstore VALUES (13, 'Into the Woods', 'Paula Hawkins', 13.59, 2017);
+INSERT INTO bookstore VALUES (14, 'Speak', 'Laurie Halse Anderson', 14.04, 2019);
+INSERT INTO bookstore VALUES (15, 'Lolita', 'Vladimir Nabokov', 13.88, 1995);
+
+--display the database order by price
+SELECT * FROM bookstore 
+ORDER BY price;
+
+
+--what is the avg release year for the books?
+SELECT AVG(release_year) FROM bookstore; 
